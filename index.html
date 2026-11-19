@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Organize suas compras da semana com o Quicklist.">
+
+    <title>Quicklist | Lista de compras</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a class="brand" href="#">
+            ✓ quicklist<span>.</span>
+        </a>
+
+        <span class="top-label">ORGANIZE SUA SEMANA</span>
+    </header>
+
+    <main class="page">
+
+        <section class="intro">
+            <div class="eyebrow">— SUA ROTINA, MAIS SIMPLES</div>
+
+            <h1>Lista de compras<span>.</span></h1>
+
+            <p>
+                Adicione o que está faltando e deixe suas compras em ordem.
+            </p>
+        </section>
+
+        <section class="list-card" aria-labelledby="list-title">
+
+            <div class="card-heading">
+                <div>
+                    <span class="mini-label">MINHA ORGANIZAÇÃO</span>
+                    <h2 id="list-title">Compras da semana</h2>
+                </div>
+
+                <div class="counter">
+                    <strong id="remaining-count">0</strong>
+                    <span>pendentes</span>
+                </div>
+            </div>
+
+            <form id="item-form" class="add-form">
+
+                <label class="sr-only" for="item-input">
+                    Nome do produto
+                </label>
+
+                <input
+                    id="item-input"
+                    type="text"
+                    placeholder="Ex.: Arroz, leite, café..."
+                    maxlength="60"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" class="add-button">
+                    ＋ Adicionar
+                </button>
+
+            </form>
+
+            <div class="list-toolbar">
+                <span id="list-summary">Sua lista está vazia.</span>
+
+                <button
+                    id="clear-completed"
+                    class="clear-button"
+                    type="button"
+                >
+                    Limpar concluídos
+                </button>
+            </div>
+
+            <ul id="shopping-list" class="shopping-list" aria-live="polite">
+
+                <li class="empty-state" id="empty-state">
+                    <div class="empty-icon">🛒</div>
+
+                    <strong>Nenhum item por aqui</strong>
+
+                    <span>
+                        Adicione seu primeiro produto acima.
+                    </span>
+                </li>
+
+            </ul>
+
+            <div class="progress-area">
+
+                <div class="progress-label">
+                    <span>Progresso das compras</span>
+                    <strong id="progress-value">0%</strong>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+
+        <p class="tip">
+            ✦ Dica: pressione Enter para adicionar um produto rapidamente.
+        </p>
+
+    </main>
+
+    <footer>
+
+        <a class="brand footer-brand" href="#">
+            ✓ quicklist<span>.</span>
+        </a>
+
+        <span>
+            Organização simples para o seu dia a dia.
+        </span>
+
+    </footer>
+
+</body>
+</html>
